@@ -1,0 +1,34 @@
+{
+    "name": "mis3085/laravel-admin-ext-forgot-password",
+    "description": "Forgot password for Laravel-admin",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/mis3085/laravel-admin-ext-forgot-password",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mis3085",
+            "email": "17059877+mis3085@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mis3085\\ForgotPassword\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mis3085\\ForgotPassword\\ForgotPasswordServiceProvider"
+            ]
+        }
+    }
+}
