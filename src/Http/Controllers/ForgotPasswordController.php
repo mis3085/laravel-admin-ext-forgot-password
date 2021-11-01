@@ -22,10 +22,11 @@ class ForgotPasswordController extends Controller
     /**
      * Handle an incoming password reset link request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param \Illuminate\Http\Request $request
      *
      * @throws \Illuminate\Validation\ValidationException
+     *
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -55,7 +56,7 @@ class ForgotPasswordController extends Controller
     }
 
     /**
-     * return password broker for admin
+     * return password broker for admin.
      *
      * @return Password
      */

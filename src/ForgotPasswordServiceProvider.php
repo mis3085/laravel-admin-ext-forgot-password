@@ -2,8 +2,8 @@
 
 namespace Mis3085\ForgotPassword;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\ServiceProvider;
 
 class ForgotPasswordServiceProvider extends ServiceProvider
 {
@@ -12,8 +12,8 @@ class ForgotPasswordServiceProvider extends ServiceProvider
      */
     public function boot(ForgotPassword $extension)
     {
-        if (! ForgotPassword::boot()) {
-            return ;
+        if (!ForgotPassword::boot()) {
+            return;
         }
 
         if ($views = $extension->views()) {
@@ -29,9 +29,9 @@ class ForgotPasswordServiceProvider extends ServiceProvider
 
         $this->app->booted(function () {
             Route::group([
-                'prefix' => config('admin.route.prefix'),
+                'prefix'     => config('admin.route.prefix'),
                 'middleware' => 'web',
-            ], __DIR__ . '/../routes/web.php');
+            ], __DIR__.'/../routes/web.php');
         });
     }
 }
